@@ -4,15 +4,30 @@
   box-sizing: border-box;
 }
 
+h1{
+font-family: 'Poppins', sans-serif;
+}
+
+h2{
+font-family: 'Poppins', sans-serif;
+font-size: 18px;
+}
+
+p{
+font-family: 'Poppins', sans-serif;
+font-size: 12px;
+}
+
 /*Navigation Bar */
 nav{
   display:flex;
   justify-content:space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #4f7942;
+  background-color:#48842C;
   font-family: 'Poppins', sans-serif;
 }
+
 
 .logo{
   color: rgb(226,226,226);
@@ -65,15 +80,19 @@ nav{
 
 /*Mobile Responsive*/
 @media screen and (max-width: 768px){
-  body{
+  body {
     overflow-x: hidden;
-  }
+}
+
   .nav-links{
     position: absolute;
     right: 0px;
     height: 92vh;
-    top: 8vh;
-    background-color: #4f7942;
+    object-fit: cover;
+    /*top: 25.5vh;*/
+    top: 25%;
+    bottom: -25%;
+    background-color:#91B580;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,4 +123,81 @@ nav{
     opacity: 1;
     transform: translateX(0px);
   }
+}
+
+/*Circle image*/
+.circle
+  {
+    background-image:url("Demo_Logo.jpg");
+    width:50%;
+    border-radius:50%;
+    border:2px solid #000;
+    box-shadow:0 0 10px #000;
+  }
+  .circle:after{
+   content:"";
+   padding-bottom:100%;
+   display:block;
+ }
+
+/*Backgrounds*/
+ .background-green{
+   background-color: #4f7942;
+
+ }
+
+ .background-footer{
+
+   background-color: #5BA638;
+ }
+
+ /*Services Offered Cards*/
+ .card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+/*Parallax Scrolling*/
+body, html {
+  height: 100%;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("Fill-in-image.jpg");
+
+  /* Set a specific height */
+  height: 60%;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 {
+  /* The image used */
+  background-image: url("Fill-in-image.png");
+
+  /* Set a specific height */
+  height: 60%;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
